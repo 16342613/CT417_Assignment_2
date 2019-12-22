@@ -3,9 +3,6 @@ jdk: oraclejdk8
 
 before_install:
     - mvn clean install
-    
-ci:
-    - 
 	
 after_success:
     - mvn test
