@@ -3,11 +3,16 @@ jdk: oraclejdk8
 
 before_install:
     - mvn clean install
+    
+ci:
+    - 
 	
 after_success:
     - mvn test
 	
-notifications:
-    email:
-        recipients:
-            i.senthilkumar1@nuigalway.ie
+integrations:
+  notifications:
+    - integrationName: email
+      type: email
+      recipients:
+        - i.senthilkumar1@nuigalway.ie
